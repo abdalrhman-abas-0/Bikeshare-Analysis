@@ -9,10 +9,6 @@ Explore bikeshare usage patterns in **Chicago**, **New York City**, and **Washin
 - [Key Features](#-key-features)
 - [Tech Stack](#-tech-stack)
 - [Quick Start](#-quick-start)
-- [Data Sources](#-data-sources)
-- [Key Insights](#-key-insights)
-- [Future Roadmap](#-future-roadmap)
-- [License](#-license)
 
 ---
 
