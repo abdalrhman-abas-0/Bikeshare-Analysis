@@ -70,7 +70,7 @@ Would you like to view 5 rows of individual trip data? Enter yes or no
 ### Installation
 1. Clone repo:
    ```bash
-   git clone https://github.com/your-username/bikeshare-analysis.git
+   git clone https://github.com/abdalrhman-abas-0/Bikeshare-Analysis.git
    ```
 2. Download datasets:
    - [Chicago Data](https://example.com/chicago.csv)
