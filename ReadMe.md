@@ -1,6 +1,68 @@
 # 🚲 US Bikeshare Data Analysis
 
-![Bikeshare Banner](https://via.placeholder.com/800x200.png?text=Bikeshare+Analysis) *Add a screenshot of your CLI/output here*
+```bash
+Hello! Let's explore some US bike share data.
+note an input will keep popping up unless it is valid!!!
+
+which city you want to see data from chicago, new york, washington? new york
+please enter a month (all, january, february, ... , june): all
+please enter a day (all, monday, tuesday, ... sunday): all
+
+Would you like to view 5 rows of individual trip data? Enter yes or no
+ no
+----------------------------------------
+
+Times of Travel Stats...
+
+        the most common month is 6.
+        the most common day of the week is Wednesday.
+        the most common hour is 5pm.
+
+This took 0.0564 seconds.
+----------------------------------------
+
+Stations and Trip Stats...
+
+        the most common start station is Pershing Square North.
+        the most common end station is Pershing Square North.
+        the most common destination is E 7 St & Avenue A to Cooper Square & E 7 St.
+
+This took 0.178 seconds.
+----------------------------------------
+
+Trip Duration Stats...
+
+        Total travel time is 269905248.
+        Average travel time is 899.68416.
+
+This took 0.002 seconds.
+----------------------------------------
+
+User Stats...
+
+- User Type Counts:
+        Subscriber: 269149
+        Customer: 30159
+
+
+'- Gender Counts:
+        Male: 204008
+        Female: 66783
+
+
+- Earliest year of birth: 1885
+- Most recent year of birth: 2001
+- Most common year of birth: 1989
+
+This took 0.058 seconds.
+----------------------------------------
+----------------------------------------
+
+Would you like to run the program again? Enter yes or no.
+no
+========================================
+
+```
 
 Explore bikeshare usage patterns in **Chicago**, **New York City**, and **Washington** with this interactive Python tool. Analyze travel times, station popularity, user demographics, and more!
 
@@ -40,12 +102,36 @@ Would you like to view 5 rows of individual trip data? Enter yes or no
 - Day of week (Monday-Sunday)
 
 ### 📊 Analytical Capabilities
-- **Peak Travel Times**  
-  - Busiest hour: 5-6 PM (15% higher ridership)
-- **Station Analysis**  
-  - Top start station: "Pershing Square North" (NYC)
-- **User Insights**  
-  - 75% subscribers vs. 25% short-term customers
+
+
+- **Times of Travel Stats**
+   - the most common month.
+   - the most common day of the week.
+   - the most common hour.
+
+- **Stations and Trip Stats**
+   - the most common start station.
+   - the most common end station.
+   - the most common destination.
+
+- **Trip Duration Stats**
+   - Total travel time.
+   - Average travel time.
+
+- **User Stats**
+   - User Type Counts:
+      - Subscriber.
+      - Customer.
+
+   - Gender Counts:
+      - Male.
+      - Female.
+
+   - Earliest year of birth.
+   - Most recent year of birth.
+   - Most common year of birth.
+
+---
 
 ### 📂 Data Utilities
 - Raw data preview (5-row increments)
@@ -58,7 +144,7 @@ Would you like to view 5 rows of individual trip data? Enter yes or no
   - Pandas (data manipulation)
   - NumPy (statistical calculations)
 - **Jupyter Notebook** (exploratory analysis)
-- **CSV Data Files** (~3.5M+ records total)
+- **CSV Data Files** 
 
 ---
 
@@ -72,14 +158,10 @@ Would you like to view 5 rows of individual trip data? Enter yes or no
    ```bash
    git clone https://github.com/abdalrhman-abas-0/Bikeshare-Analysis.git
    ```
-2. Download datasets:
-   - [Chicago Data](https://example.com/chicago.csv)
-   - [NYC Data](https://example.com/nyc.csv)
-   - [Washington Data](https://example.com/washington.csv)
    
-3. Run analysis:
+2. Run analysis:
    ```bash
-   python bikeshare.py
+   python bike_share.py
    ```
 
 ---

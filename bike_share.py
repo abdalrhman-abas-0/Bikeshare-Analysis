@@ -21,7 +21,7 @@ def get_filters():
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+        (str) day - name of the day of the week to filter by, or "all" to apply no day filter
     """
     print('\nHello! Let\'s explore some US bike share data.\nnote an input will keep popping up unless it is valid!!!\n')
 
@@ -31,19 +31,19 @@ def get_filters():
     city = "g"
     while city not in CITIES:
         # get user input for city (chicago, new york city, washington).
-        city = str(input("which city you want to see data from chicago, new york, washington?").lower())
+        city = str(input("which city you want to see data from chicago, new york, washington? ").lower())
 
 
     month = "g"
     while month not in MONTHS:
         # get user input for month (all, january, february, ... , june)
-        month =str(input('please enter a month (all, january, february, ... , june):').lower())
+        month =str(input('please enter a month (all, january, february, ... , june): ').lower())
 
 
     day = "g"
     while day not in W_DAYS:
-        # get user input for day of week (all, monday, tuesday, ... sunday)
-        day = str(input('please enter a day (all, monday, tuesday, ... sunday):').lower())
+        # get user input for day of the week (all, monday, tuesday, ... sunday)
+        day = str(input('please enter a day (all, monday, tuesday, ... sunday): ').lower())
 
 
     
@@ -59,7 +59,7 @@ def load_data(city, month, day):
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
-    # extract month and day of week from Start Time to create new columns
+    # extract month and day of the week from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.day_name()
 
@@ -75,9 +75,9 @@ def load_data(city, month, day):
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
 
-    # filter by day of week if applicable
+    # filter by day of the week if applicable
     if day != 'all':
-        # filter by day of week to create the new dataframe
+        # filter by day of the week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
 
     df.fillna('N.A.')
@@ -87,7 +87,7 @@ def raw_data_input_():
     view_data = ""
     input_error_counter = 3
     while view_data not in y_or_n and input_error_counter > 0:
-        view_data = str(input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower())
+        view_data = str(input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n ').lower())
         input_error_counter -= 1
     if view_data not in y_or_n:
         return y_or_n[-1]
@@ -112,9 +112,9 @@ def time_stats(df):
     print(f"\tthe most common month is {m}.")
 
 
-    # display the most common day of week
+    # display the most common day of the week
     d = df['day_of_week'].mode()[0]
-    print(f"\tthe most common day of week is {d}.")
+    print(f"\tthe most common day of the week is {d}.")
 
     # display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
